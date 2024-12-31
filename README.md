@@ -188,9 +188,9 @@ npm run test:coverage
 
 ## 📱 Screenshots
 <div align="center">
-  <img src="readmeimages/screen1.jpeg" alt="Screen 1" width="250"  height="350" style="margin: 10px;">
-  <img src="readmeimages/screen2.jpeg" alt="Screen 2" width="250"  height="350" style="margin: 10px;">
-  <img src="readmeimages/skeleton.jpeg" alt="skeleton 3" width="250"  height="350" style="margin: 10px;">
+  <img src="readmeimages/screen1.jpeg" alt="Screen 1" width="250"  height="400" style="margin: 10px;">
+  <img src="readmeimages/screen2.jpeg" alt="Screen 2" width="250"  height="400" style="margin: 10px;">
+  <img src="readmeimages/skeleton.jpeg" alt="skeleton 3" width="250"  height="400" style="margin: 10px;">
 </div>
 
 
