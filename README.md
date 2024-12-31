@@ -10,12 +10,16 @@ A full-stack implementation of a Featured Jobs section using React Native, TypeS
 - TailwindCSS
 - Jest for testing
 
+https://expo.dev/accounts/alfiyas/projects/frontend
+
 ### Backend
 - Node.js
 - Express
 - TypeScript
 - Prisma
 - PostgreSQL
+
+https://jobfeatured.onrender.com/
 
 ## 🛠️ Setup Instructions
 
@@ -156,7 +160,6 @@ npm run test         # Run all tests
 npm run test:watch   # Run tests in watch mode
 npm run test:coverage # Generate coverage report
 ```
-https://expo.dev/accounts/alfiyas/projects/frontend
 
 ### Backend Tests
 ```bash
@@ -165,7 +168,6 @@ npm run test
 npm run test:coverage
 ```
 
-https://jobfeatured.onrender.com/
 
 ## 🔍 Project Structure
 ```
@@ -185,10 +187,11 @@ https://jobfeatured.onrender.com/
 ```
 
 ## 📱 Screenshots
-
-![Screen 1](readmeimages/screen1.jpeg)
-![Screen 2](readmeimages/screen2.jpeg)
-![Skeleton](readmeimages/skelwton.jpeg)
+<div align="center">
+  <img src="readmeimages/screen1.jpeg" alt="Screen 1" width="250"  height="350" style="margin: 10px;">
+  <img src="readmeimages/screen2.jpeg" alt="Screen 2" width="250"  height="350" style="margin: 10px;">
+  <img src="readmeimages/skeleton.jpeg" alt="skeleton 3" width="250"  height="350" style="margin: 10px;">
+</div>
 
 
 The Featured Jobs section includes:
