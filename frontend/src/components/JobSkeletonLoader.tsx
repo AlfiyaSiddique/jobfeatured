@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 export const JobSkeletonLoader: React.FC = () => {
   return (
-    <View className="rounded-2xl p-4 mb-4 bg-gray-800">
+    <View className="w-[90vw] rounded-2xl p-4 mb-4 bg-gray-800">
       <View className="flex-row justify-between items-start mb-4">
         <View className="w-12 h-12 bg-gray-700 rounded-full" />
         <View className="w-20 h-6 bg-gray-700 rounded-full" />

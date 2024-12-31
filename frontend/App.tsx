@@ -1,10 +1,13 @@
 // FeaturedJobsSection.tsx
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import CategoryFilter from './src/components/CategoryFilter';
 import { FeaturedJobCard } from './src/components/FeaturedJobCard';
 import { JobSkeletonLoader } from './src/components/JobSkeletonLoader';
-import Config from 'react-native-config';
+import { BACKENDURL } from "@env" 
+import "./global.css"
+import CategorySkeloton from './src/components/CategorySkeleton';
+import StaticDesign from './src/components/StaticDesign';
 
 interface Job {
   id: number;
@@ -17,7 +20,7 @@ interface Job {
 }
 
 const App: React.FC = () => {
-  const baseURL:string = Config.BACKENDURL;
+  const baseURL: string = BACKENDURL;
   const [jobs, setJobs] = useState<Job[]>([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -31,7 +34,8 @@ const App: React.FC = () => {
   const fetchCategories = async () => {
     try {
       const response = await fetch(`${baseURL}/api/categories`);
-      const data = await response.json();
+      let data = await response.json();
+      data = [{name: 'All', id: 0}, ...data]
       setCategories(data);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -69,19 +73,33 @@ const App: React.FC = () => {
   };
 
   return (
-    <View className="p-4">
+    <View className="p-4 pt-16 bg-[#111111]">
+      <StaticDesign username={'Alfiya'} location={'Mumbai'}/>
       <View className="mb-4">
-        <Text className="text-2xl font-bold text-white mb-4">
-          Featured Jobs
-        </Text>
+        {loading ? (
+        <CategorySkeloton />
+      ) : (
          <CategoryFilter
           categories={categories}
           selectedCategory={selectedCategory}
           onSelectCategory={setSelectedCategory}
-        /> 
+        />
+      )} 
       </View>
+      <View className='flex-row justify-between items-center'>
+      <Text className="text-2xl font-bold text-white mb-2">
+          Featured Jobs 
+        </Text>
+        <Text className='text-xs text-white font-thin'>Last updated: 2 hours ago</Text>
+      </View>
+      
 
-       {loading ? (
+ <ScrollView 
+          horizontal 
+          showsHorizontalScrollIndicator={false}
+          className="flex-row space-x-2 py-4"
+        >
+ {loading ? (
         <JobSkeletonLoader />
       ) : (
         jobs.map((job) => (
@@ -92,6 +110,8 @@ const App: React.FC = () => {
           />
         ))
       )} 
+        </ScrollView>
+      
     </View>
   );
 };

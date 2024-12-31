@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 interface JobProps {
   id: number;
@@ -21,27 +21,22 @@ export const FeaturedJobCard: React.FC<JobProps> = ({
   onApply,
 }) => {
   return (
-    <View className="rounded-2xl p-4 mb-4 bg-gradient-to-br from-purple-600 to-purple-700">
-      <View className="flex-row justify-between items-start mb-4">
+    <View className="w-[85vw] rounded-2xl p-4 m-4 mx-2 bg-[#7C3AED]">
+      <View className="flex-row justify-between items-start mb-">
         <View className="w-12 h-12 bg-white rounded-full justify-center items-center">
           <Text className="text-purple-600 text-xl">
             {company.charAt(0)}
           </Text>
+        </View>
+        <View className="mx-3">
+        <Text className="w-36 text-white text-xl font-bold mb-1">{title}</Text>
+        <Text className="w-36 text-white/80 mb-4">{company}, {location}</Text>
         </View>
         {featured && (
           <View className="bg-white/20 px-3 py-1 rounded-full">
             <Text className="text-white text-xs">Featured</Text>
           </View>
         )}
-      </View>
-
-      <Text className="text-white text-xl font-bold mb-1">{title}</Text>
-      <Text className="text-white/80 mb-2">{company}</Text>
-      
-      <View className="flex-row items-center mb-2">
-        <View className="flex-row items-center">
-          <Text className="text-white/60">{location}</Text>
-        </View>
       </View>
       
       <Text className="text-white text-lg font-semibold mb-4">{salary}</Text>

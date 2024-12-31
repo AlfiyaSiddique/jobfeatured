@@ -23,9 +23,9 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({categories, selectedCate
             <TouchableOpacity
               key={category.id}
               onPress={() => onSelectCategory(category.name)}
-              className={`px-6 py-2 rounded-full ${
+              className={`px-6 mx-2 py-2 rounded-full ${
                 selectedCategory === category.name
-                  ? 'bg-purple-600'
+                  ? 'bg-[#7C3AED]'
                   : 'bg-gray-800'
               }`}
             >

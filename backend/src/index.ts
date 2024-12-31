@@ -11,7 +11,7 @@ app.use('/api', router)
 
 
 app.get("/", (req,res)=>{
-    res.json("Job Feature server is running")
+    res.json("Job Feature server is running. Map-> Api1 = Get: /api/categories | Api2 =  Get: /jobs/featured")
 })
 
 app.listen(port, ()=>{
