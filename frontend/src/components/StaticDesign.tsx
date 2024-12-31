@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import { Bell, ChevronDown, Search, Lightbulb } from 'lucide-react-native';
+import React from "react";
+import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { Bell, ChevronDown, Search, Lightbulb } from "lucide-react-native";
 
 interface HeaderProps {
   username: string;
@@ -12,12 +12,19 @@ const StaticDesign: React.FC<HeaderProps> = ({ username, location }) => {
     <View className="p-4 space-y-4">
       {/* Top Row */}
       <View className="flex-row justify-between items-center">
+        <View className="w-12 h-12 bg-white rounded-full justify-center items-center overflow-hidden">
+          <Image
+            src={"https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/04cbf851-aeb2-4af6-be64-15feff838f36/569972be-0c98-4859-87b3-dd145228b33e.png" }
+            className="w-full h-full"
+            resizeMode="cover"
+          />
+        </View>
         <TouchableOpacity className="flex-row items-center space-x-1">
           <Text className="text-white text-base font-medium">{location}</Text>
           <ChevronDown size={20} color="white" />
         </TouchableOpacity>
-        
-        <TouchableOpacity className='border-grey-100 border-r-[100%]'>
+
+        <TouchableOpacity className="border-grey-100 border-r-[100%]">
           <Bell size={20} color="white" />
         </TouchableOpacity>
       </View>
@@ -38,7 +45,7 @@ const StaticDesign: React.FC<HeaderProps> = ({ username, location }) => {
             placeholderTextColor="#666"
           />
         </View>
-        
+
         <TouchableOpacity className="bg-purple-600 rounded-lg p-3">
           <Lightbulb size={20} color="white" />
         </TouchableOpacity>

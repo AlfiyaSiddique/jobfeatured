@@ -21,7 +21,7 @@ export const FeaturedJobCard: React.FC<JobProps> = ({
   onApply,
 }) => {
   return (
-    <View className="w-[85vw] rounded-2xl p-4 m-4 mx-2 bg-[#7C3AED]">
+    <View className="w-[85vw] max-h-[35vh] rounded-2xl p-4 m-4 mx-2 bg-[#7C3AED]">
       <View className="flex-row justify-between items-start mb-">
         <View className="w-12 h-12 bg-white rounded-full justify-center items-center">
           <Text className="text-purple-600 text-xl">

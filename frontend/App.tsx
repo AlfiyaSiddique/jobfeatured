@@ -73,7 +73,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <View className="p-4 pt-16 bg-[#111111]">
+    <View className="p-4 h-[100%] pt-16 bg-[#111111]">
       <StaticDesign username={'Alfiya'} location={'Mumbai'}/>
       <View className="mb-4">
         {loading ? (
