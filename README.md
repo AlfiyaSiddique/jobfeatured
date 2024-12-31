@@ -156,6 +156,7 @@ npm run test         # Run all tests
 npm run test:watch   # Run tests in watch mode
 npm run test:coverage # Generate coverage report
 ```
+https://expo.dev/accounts/alfiyas/projects/frontend
 
 ### Backend Tests
 ```bash
@@ -163,6 +164,8 @@ npm run test:coverage # Generate coverage report
 npm run test
 npm run test:coverage
 ```
+
+https://jobfeatured.onrender.com/
 
 ## 🔍 Project Structure
 ```
@@ -182,6 +185,11 @@ npm run test:coverage
 ```
 
 ## 📱 Screenshots
+
+![Screen 1](readmeimages/screen1.jpeg)
+![Screen 2](readmeimages/screen2.jpeg)
+![Skeleton](readmeimages/skelwton.jpeg)
+
 
 The Featured Jobs section includes:
 - Horizontal scrolling category filter
