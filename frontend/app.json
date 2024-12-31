@@ -14,17 +14,31 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.alfiyas.frontend",
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.alfiyas.frontend",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "bundler": "metro",
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8ccaafc9-f6e5-4c5d-ba8b-1735e7e42a29"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8ccaafc9-f6e5-4c5d-ba8b-1735e7e42a29"
     }
   }
 }
