@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { getFeaturedJobs, getCategories } from '../src/controllers/jobController';
+import { getFeaturedJobs } from  '../controllers/jobController';
 
 const prisma = new PrismaClient();
 
